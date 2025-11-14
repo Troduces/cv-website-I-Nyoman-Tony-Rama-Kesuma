@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 
+      ============================================
+      INSTRUKSI: Ganti [Nama Anda] dengan nama lengkap Anda
+      Contoh: CV - John Doe
+      ============================================
+    -->
+    <title>CV - Tony Rama</title>
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Google untuk tipografi yang lebih menarik -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome untuk ikon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Tombol Dark Mode -->
+<div class="dark-toggle" id="darkModeToggle">
+  <div class="toggle-track">
+    <div class="toggle-thumb">
+      <span class="icon sun">🌙</span>
+      <span class="icon moon">☀️</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    <!-- 
+      ============================================
+      SECTION 1: NAVIGATION BAR
+      ============================================
+      PENJELASAN:
+      - Navigation bar ini akan tetap terlihat saat scroll (sticky)
+      - Berisi logo dan menu navigasi ke berbagai section
+      - Responsive dengan hamburger menu untuk mobile
+      
+      INSTRUKSI PENGISIAN:
+      1. Ganti [Nama Anda] di nav-logo dengan nama/brand Anda
+      2. Menu navigasi sudah disesuaikan dengan section di bawah
+      3. Jangan ubah href="#section" agar navigasi berfungsi
+      ============================================
+    -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <!-- Logo atau nama brand - GANTI [Nama Anda] -->
+        <div class="nav-logo">
+          <a href="#home">Tony Rama</a>
+        </div>
+
+        <!-- Menu navigasi utama -->
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">Tentang Saya</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Keahlian</a>
+          </li>
+        
+          <li class="nav-item">
+            <a href="#education" class="nav-link">Pendidikan</a>
+          </li>
+          <li class="nav-item">
+            <a href="#experience" class="nav-link">Pengalaman</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Kontak</a>
+          </li>
+        </ul>
+
+        <!-- Hamburger menu untuk mobile (3 garis horizontal) -->
+        <div class="nav-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 
+      ============================================
+      SECTION 2: HERO / HOME
+      ============================================
+      PENJELASAN:
+      - Bagian pertama yang dilihat pengunjung (landing page)
+      - Berisi foto profil, nama, profesi, dan deskripsi singkat
+      - Dilengkapi tombol CTA dan social media links
+      
+      INSTRUKSI PENGISIAN:
+      1. Ganti URL foto profil dengan foto Anda sendiri
+         (Upload foto ke folder project atau gunakan link online)
+      2. Ganti [Nama Lengkap Anda] dengan nama asli
+      3. Edit array profesi di script.js untuk typing effect
+      4. Tulis deskripsi singkat tentang diri Anda (2-3 kalimat)
+      5. Update link social media dengan profil Anda
+      
+      TIPS:
+      - Foto profil recommended: 300x300px, format JPG/PNG
+      - Deskripsi sebaiknya tidak lebih dari 3 baris
+      - Gunakan kata-kata yang menarik dan profesional
+      ============================================
+    -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <!-- 
+          FOTO PROFIL
+          INSTRUKSI: Ganti URL dengan path foto Anda
+          Contoh: src="images/profile.jpg" atau src="https://link-foto.com/foto.jpg"
+        -->
+        <div class="hero-image">
+          <img
+            src="WhatsApp Image 2025-11-08 at 10.12.45.jpeg"
+            alt="Foto Profil"
+            class="profile-img"
+          />
+        </div>
+
+        <!-- INFORMASI UTAMA -->
+        <div class="hero-content">
+          <!-- 
+            NAMA ANDA
+            INSTRUKSI: Ganti [Nama Lengkap Anda] dengan nama asli
+          -->
+          <h1 class="hero-title">
+            Halo, Saya <span class="highlight">I Nyoman Tony Rama Kesuma</span>
+          </h1>
+          
+          <!-- 
+            PROFESI/TITLE (dengan typing effect)
+            INSTRUKSI: Text ini akan berubah otomatis (lihat script.js)
+            Edit array textArray di script.js untuk mengubah profesi yang ditampilkan
+          -->
+          <h2 class="hero-subtitle">
+            <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+          </h2>
+          
+          <!-- 
+            DESKRIPSI SINGKAT
+            INSTRUKSI: Tulis 2-3 kalimat tentang diri Anda
+            Ganti [profesi/bidang Anda] dan [keahlian utama]
+            Contoh: "Saya adalah seorang Web Developer yang berpengalaman dalam..."
+          -->
+          <p class="hero-description">
+            Saya adalah mahasiswa Teknik Elektro Universitas Udayana yang tertarik pada bidang elektronika, sistem tenaga, dan Internet of Things. Saya senang belajar hal baru.
+          </p>
+
+          <!-- 
+            TOMBOL CALL-TO-ACTION
+            INSTRUKSI: Tombol ini sudah terhubung ke section Contact dan Portfolio
+            Tidak perlu diubah kecuali ingin mengganti text tombol
+          -->
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Hubungi Saya</a>
+            <a href="#experience" class="btn btn-secondary">Lihat Portofolio</a>
+          </div>
+
+          <!-- 
+            SOCIAL MEDIA LINKS
+            INSTRUKSI: Ganti href="#" dengan URL profil social media Anda
+            Contoh: href="https://linkedin.com/in/username"
+            Hapus atau tambah social media sesuai kebutuhan
+          -->
+          <div class="social-links">
+            <a href="https://www.linkedin.com/" class="social-link" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Troduces" class="social-link" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/tnyrama?igsh=cDJ0NmtrZHU3NnY1" class="social-link" target="_blank" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#contact" class="social-link" target="#contact" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator (panah ke bawah) -->
+      <div class="scroll-indicator">
+        <a href="#about">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 
+      ============================================
+      SECTION 3: TENTANG SAYA / ABOUT
+      ============================================
+      PENJELASAN:
+      - Berisi profil lengkap dan informasi personal
+      - Detail tentang background pendidikan dan pengalaman
+      - Link download CV
+      
+      INSTRUKSI PENGISIAN:
+      1. Tulis deskripsi lengkap tentang diri Anda (1 paragraf)
+      2. Isi detail informasi: Nama, Lokasi, Email, Pendidikan
+      3. Upload file CV Anda dan update link download
+      4. Ganti gambar placeholder dengan foto/ilustrasi yang sesuai
+      
+      TIPS:
+      - Ceritakan unique selling point Anda
+      - Highlight pencapaian atau sertifikasi penting
+      - Gunakan bahasa yang personal tapi profesional
+      ============================================
+    -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>Tentang Saya</h2>
+          <p>Kenali lebih dekat tentang background dan passion saya</p>
+        </div>
+
+        <div class="about-content">
+          <!-- 
+            INFORMASI PERSONAL
+            INSTRUKSI: Tulis cerita tentang diri Anda di sini
+          -->
+          <div class="about-text">
+            <h3>Profil Singkat</h3>
+            <!-- 
+              DESKRIPSI LENGKAP
+              INSTRUKSI: Tulis 3-5 kalimat tentang:
+              - Background pendidikan Anda
+              - Pengalaman profesional
+              - Keahlian dan passion
+              - Apa yang membuat Anda unik
+            -->
+            <p>
+              Saya adalah mahasiswa Teknik Elektro Universitas Udayana angkatan 2025. Saya memiliki minat besar dalam bidang elektronika, sistem tenaga, dan Internet of Things. Saya gemar mempelajari hal baru. 
+            
+            </p>
+
+            <!-- 
+              DETAIL INFORMASI
+              INSTRUKSI: Isi setiap detail dengan informasi Anda
+              Tambah atau kurangi detail-item sesuai kebutuhan
+            -->
+            <div class="about-details">
+              <div class="detail-item">
+                <span class="detail-label">Nama:</span>
+                <span class="detail-value">I Nyoman Tony Rama Kesuma</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Lokasi:</span>
+                <span class="detail-value">Jimbaran, Bali, Indonesia</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Email:</span>
+                <span class="detail-value">tonyrama2007@gmail.com</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Pendidikan:</span>
+                <span class="detail-value">Mahasiswa Teknik Elektro, Universitas Udayana</span>
+              </div>
+            </div>
+
+            <!-- 
+              TOMBOL DOWNLOAD CV
+              INSTRUKSI: 
+              1. Upload file CV Anda (format PDF) ke folder project
+              2. Ganti href="#" dengan "path/ke/CV-Anda.pdf"
+              Contoh: href="files/CV-JohnDoe.pdf"
+            -->
+            <div class="about-buttons">
+              <a href="CV Tony baru.pdf" class="btn btn-primary" download>
+                <i class="fas fa-download"></i> Download CV
+              </a>
+            </div>
+          </div>
+
+          <!-- 
+            GAMBAR ABOUT
+            INSTRUKSI: Ganti dengan foto/ilustrasi yang mewakili Anda
+            Bisa foto working, hobi, atau ilustrasi yang relevan
+          -->
+          <div class="about-image">
+            <img src="data:image/jpeg;base64,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" alt="About Image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      ============================================
+      SECTION 4: KEAHLIAN / SKILLS
+      ============================================
+      PENJELASAN:
+      - Menampilkan technical skills dengan progress bar
+      - Menampilkan soft skills dengan ikon
+      - Skills akan ter-animasi saat di-scroll
+      
+      INSTRUKSI PENGISIAN:
+      1. Tambah/kurangi skill-item sesuai keahlian Anda
+      2. Sesuaikan persentase skill (data-width)
+      3. Ganti ikon sesuai teknologi (cari di Font Awesome)
+      4. Edit soft skills sesuai dengan kelebihan Anda
+      
+      TIPS:
+      - Jujur dengan level skill (jangan berlebihan)
+      - Fokus pada skill yang relevan dengan target pekerjaan
+      - Update persentase: 
+        * 90-100%: Expert/Mastery
+        * 70-89%: Advanced
+        * 50-69%: Intermediate
+        * 30-49%: Basic
+      ============================================
+    -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="section-title">
+          <h2>Keahlian & Teknologi</h2>
+          <p>Technologies dan tools yang saya kuasai</p>
+        </div>
+
+        <div class="skills-content">
+          <!-- 
+            TECHNICAL SKILLS
+            INSTRUKSI: Copy-paste skill-item untuk menambah skill baru
+          -->
+          <div class="skills-category">
+            <h3>Technical Skills</h3>
+            <div class="skills-grid">
+              <!-- 
+                SKILL ITEM TEMPLATE
+                INSTRUKSI untuk setiap skill:
+                1. Ganti ikon (cari di fontawesome.com)
+                2. Ganti nama skill di <h4>
+                3. Update data-width="XX%" sesuai level Anda
+                4. Update skill-percentage text sesuai data-width
+                5. Copy seluruh div.skill-item untuk menambah skill baru
+              -->
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <!-- INSTRUKSI: Ganti class ikon di sini -->
+                  <i class="devicon-cplusplus-plain colored"></i>
+                </div>
+                <!-- INSTRUKSI: Ganti nama teknologi -->
+                <h4>C++</h4>
+                <div class="skill-bar">
+                  <!-- INSTRUKSI: Ganti persentase sesuai level Anda (0-100%) -->
+                  <div class="skill-progress" data-width="70%"></div>
+                </div>
+                <!-- INSTRUKSI: Sesuaikan dengan data-width di atas -->
+                <span class="skill-percentage">70%</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-python"></i>
+                </div>
+                <h4>Python</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="75%"></div>
+                </div>
+                <span class="skill-percentage">75%</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="devicon-arduino-plain colored"></i>
+                </div>
+                <h4>Arduino</h4>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="80%"></div>
+                </div>
+                <span class="skill-percentage">80%</span>
+              </div>
+
+              <!-- Tambahkan skill lainnya sesuai kebutuhan -->
+            </div>
+          </div>
+
+          <!-- 
+            SOFT SKILLS
+            INSTRUKSI: 
+            1. Edit nama soft skill sesuai kelebihan Anda
+            2. Ganti ikon sesuai skill (cari di Font Awesome)
+            3. Tambah/kurangi soft-skill-item sesuai kebutuhan
+          -->
+          <div class="skills-category">
+            <h3>Soft Skills</h3>
+            <div class="soft-skills">
+              <div class="soft-skill-item">
+                <i class="fas fa-users"></i>
+                <!-- INSTRUKSI: Ganti dengan soft skill Anda -->
+                <span>Kerjasama Tim</span>
+              </div>
+              <div class="soft-skill-item">
+                <i class="fas fa-lightbulb"></i>
+                <span>Problem Solving</span>
+              </div>
+              <div class="soft-skill-item">
+                <i class="fas fa-comments"></i>
+                <span>Komunikasi</span>
+              </div>
+              <div class="soft-skill-item">
+                <i class="fas fa-clock"></i>
+                <span>Management Waktu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      ============================================
+      SECTION 5: PORTOFOLIO / PORTFOLIO
+      ============================================
+      PENJELASAN:
+      - Showcase project terbaik Anda
+      - Dilengkapi filter berdasarkan kategori
+      - Setiap project punya overlay dengan link
+      
+      INSTRUKSI PENGISIAN:
+      1. Upload screenshot/gambar project Anda
+      2. Isi nama project dan deskripsi singkat
+      3. Update link ke live demo dan repository
+      4. Set kategori project (data-category)
+      5. Tambahkan technology tags yang digunakan
+      
+      TIPS:
+      - Gunakan gambar berkualitas tinggi (min 400x300px)
+      - Deskripsi max 2-3 baris
+      - Prioritaskan project terbaik (3-6 project)
+      - Link bisa ke GitHub, live demo, atau case study
+      ============================================
+    -->
+
+
+    <!-- 
+      ============================================
+      SECTION 6: PENDIDIKAN / EDUCATION
+      ============================================
+      PENJELASAN:
+      - Menampilkan riwayat pendidikan formal
+      - Format card untuk setiap jenjang pendidikan
+      - Bisa tambahkan sertifikasi atau pelatihan
+      
+      INSTRUKSI PENGISIAN:
+      1. Isi jenjang pendidikan (S1, S2, SMA, dll)
+      2. Nama institusi/universitas
+      3. Jurusan/program studi
+      4. Tahun masuk - lulus
+      5. IPK/prestasi (opsional)
+      
+      TIPS:
+      - Urutkan dari pendidikan terbaru ke terlama
+      - Tambahkan sertifikasi penting jika ada
+      - Bisa tambahkan logo universitas
+      - Highlight prestasi akademik jika ada
+      ============================================
+    -->
+    <section id="education" class="education">
+      <div class="container">
+        <div class="section-title">
+          <h2>Pendidikan</h2>
+          <p>Riwayat pendidikan formal dan sertifikasi</p>
+        </div>
+
+        <div class="education-content">
+          <!-- 
+            EDUCATION CARD 1 (Pendidikan Terbaru)
+            INSTRUKSI: Isi dengan pendidikan tertinggi/terbaru
+          -->
+          <div class="education-card">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-info">
+              <!-- INSTRUKSI: Ganti dengan jenjang pendidikan (S1, S2, D3, SMA, dll) -->
+              <h3>S1</h3>
+              <!-- INSTRUKSI: Ganti dengan nama universitas/sekolah -->
+              <h4>Universitas Udayana</h4>
+              <!-- INSTRUKSI: Ganti dengan jurusan/program studi -->
+              <p class="education-major">
+                <i class="fas fa-book"></i> Teknik Elektro
+              </p>
+              <!-- INSTRUKSI: Ganti dengan tahun masuk - lulus -->
+              <p class="education-year">
+                <i class="fas fa-calendar"></i> 2025 - Sekarang
+              </p>
+              <!-- 
+                INSTRUKSI: (Opsional) Tambahkan IPK atau prestasi
+                Hapus baris ini jika tidak ingin menampilkan
+              -->
+              <p class="education-gpa">
+                <i class="fas fa-award"></i> IPK: - / 4.00
+              </p>
+              <!-- 
+                INSTRUKSI: (Opsional) Tambahkan deskripsi singkat atau prestasi
+                Hapus tag <ul> ini jika tidak perlu
+              -->
+              
+            </div>
+          </div>
+
+          <!-- 
+            EDUCATION CARD 2 (Pendidikan Sebelumnya)
+            INSTRUKSI: Copy education-card untuk menambah pendidikan lainnya
+          -->
+          <div class="education-card">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-info">
+              <h3>SMK</h3>
+              <h4>SMK Negeri 1 Kuta Selatan</h4>
+              <p class="education-major">
+                <i class="fas fa-book"></i> Teknik Elektronika
+              </p>
+              <p class="education-year">
+                <i class="fas fa-calendar"></i> 2022 - 2025
+              </p>
+              <ul class="education-achievements">
+                <li>Peraih Nilai Tertinggi</li>
+                <li>Peringkat 2 Akademik</li>
+                <li>Mengikuti Organisasi OSIS</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 
+            INSTRUKSI: Copy seluruh <div class="education-card"> 
+            untuk menambah riwayat pendidikan lainnya atau sertifikasi
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      ============================================
+      SECTION 7: PENGALAMAN / EXPERIENCE
+      ============================================
+      PENJELASAN:
+      - Menampilkan riwayat pekerjaan dalam format timeline
+      - Bisa untuk pengalaman kerja, organisasi, atau pendidikan
+      - Timeline otomatis tersusun dari yang terbaru
+      
+      INSTRUKSI PENGISIAN:
+      1. Isi periode waktu (tahun mulai - selesai)
+      2. Tulis posisi/jabatan Anda
+      3. Nama perusahaan/organisasi
+      4. Deskripsi singkat tanggung jawab (2-3 kalimat)
+      5. List 3-5 pencapaian penting
+      
+      TIPS:
+      - Urutkan dari pengalaman terbaru ke terlama
+      - Gunakan action words (Developed, Managed, Led, etc.)
+      - Highlight hasil/impact yang terukur jika ada
+      - Bisa dicampur: kerja, organisasi, volunteer, pendidikan
+      ============================================
+    -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <div class="section-title">
+          <h2>Pengalaman</h2>
+          <p>Perjalanan karier dan pendidikan saya</p>
+        </div>
+
+        <div class="experience-content">
+          <!-- Timeline untuk pengalaman kerja -->
+          <div class="timeline">
+            <!-- 
+              TIMELINE ITEM 1 (Pengalaman Terbaru)
+              INSTRUKSI: Isi dengan pengalaman kerja/organisasi terbaru
+            -->
+            <div class="timeline-item">
+              <div class="timeline-date">
+                <!-- INSTRUKSI: Ganti dengan periode kerja (contoh: "2023 - Sekarang") -->
+                <span>1 September 2025 - Sekarang</span>
+              </div>
+              <div class="timeline-content">
+                <!-- INSTRUKSI: Ganti dengan posisi/jabatan Anda -->
+                <h3>Mahasiswa Teknik Elektro</h3>
+                <!-- INSTRUKSI: Ganti dengan nama perusahaan/organisasi -->
+                <h4>Universitas Udayana</h4>
+                <!-- 
+                  INSTRUKSI: Tulis 2-3 kalimat tentang:
+                  - Tanggung jawab utama
+                  - Project yang dikerjakan
+                  - Impact/hasil yang dicapai
+                -->
+                <p>
+                  Saat ini saya adalah Mahasiswa Baru Teknik Elektro Universitas Udayana
+                </p>
+                <!-- 
+                  INSTRUKSI: List 3-5 pencapaian/tanggung jawab penting
+                  Gunakan action words dan hasil terukur jika ada
+                -->
+                <ul>
+                  <li>Belum Ada Pencapaian</li>
+              
+                </ul>
+              </div>
+            </div>
+
+            <!-- 
+              TIMELINE ITEM 2 (Pengalaman Sebelumnya)
+              INSTRUKSI: Copy timeline-item untuk menambah pengalaman lainnya
+            -->
+            <div class="timeline-item">
+              <div class="timeline-date">
+                <span>8 Januari 2024 - 8 Januari 2025</span>
+              </div>
+              <div class="timeline-content">
+                <h3>Engineering Intern</h3>
+                <h4>Mercure Hotel Nusa Dua</h4>
+                <p>
+                  Deskripsi pengalaman kerja sebelumnya dan kontribusi yang
+                  diberikan.
+                </p>
+                <ul>
+                  <li>Engineering Civil: Perbaikan fasilitas, pemeliharaan bangunan, dan penanganan kebocoran.</li>
+                  <li>Engineering Electrical: Instalasi dan pemeliharaan kelistrikan, pencahayaan dan panel listrik. </li>
+                  <li>Engineering Mechanical: Melakukan perawatan perangkat mekanik AC, dan pompa air. </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 
+              INSTRUKSI: Copy seluruh <div class="timeline-item"> 
+              untuk menambah pengalaman kerja/organisasi lainnya
+            -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      ============================================
+      SECTION 8: KONTAK / CONTACT
+      ============================================
+      PENJELASAN:
+      - Menampilkan informasi kontak lengkap
+      - Form untuk pengunjung mengirim pesan
+      - Form sudah ada validasi otomatis
+      
+      INSTRUKSI PENGISIAN:
+      1. Update semua informasi kontak (alamat, phone, email)
+      2. Form sudah berfungsi dengan JavaScript
+      3. Jika ingin kirim email real, integrasikan dengan service
+         (EmailJS, FormSpree, Netlify Forms, dll.)
+      
+      TIPS:
+      - Gunakan email profesional
+      - Bisa tambah info kontak lain (WhatsApp, Telegram, dll.)
+      - Form akan show notifikasi saat berhasil
+      ============================================
+    -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Hubungi Saya</h2>
+          <p>Mari berdiskusi tentang project atau kolaborasi yang menarik</p>
+        </div>
+
+        <div class="contact-content">
+          <!-- 
+            INFORMASI KONTAK KIRI
+            INSTRUKSI: Ganti semua [...] dengan informasi kontak Anda
+          -->
+          <div class="contact-info">
+            <h3>Informasi Kontak</h3>
+            
+            <!-- Contact Item 1: Alamat -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Alamat</h4>
+                <!-- INSTRUKSI: Ganti dengan alamat lengkap Anda -->
+                <p>Jalan Uluwatu 2, Ungasan, Badung, Bali</p>
+              </div>
+            </div>
+
+            <!-- Contact Item 2: Telepon -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Telepon</h4>
+                <!-- INSTRUKSI: Ganti dengan nomor telepon Anda -->
+                <p>+62 858 5727 9322</p>
+              </div>
+            </div>
+
+            <!-- Contact Item 3: Email -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <!-- INSTRUKSI: Ganti dengan email Anda -->
+                <p>tonyrama2007@gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 
+            CONTACT FORM (KANAN)
+            PENJELASAN:
+            - Form sudah ada validasi otomatis
+            - Submit akan dihandle oleh JavaScript (lihat script.js)
+            - Untuk kirim email real, integrasikan dengan service
+            
+            INSTRUKSI:
+            - Form sudah siap pakai, tidak perlu diubah
+            - Jika ingin kirim ke email, lihat script.js line ~220
+          -->
+          <div class="contact-form">
+            <h3>Kirim Pesan</h3>
+            <form id="contactForm" action="https://formspree.io/f/xqawazae" method="POST">
+  <!-- Input Nama -->
+  <div class="form-group">
+    <input type="text" id="name" name="name" placeholder="Nama Lengkap" required />
+  </div>
+
+  <!-- Input Email -->
+  <div class="form-group">
+    <input type="email" id="email" name="email" placeholder="Email" required />
+  </div>
+
+  <!-- Input Subject -->
+  <div class="form-group">
+    <input type="text" id="subject" name="subject" placeholder="Subject" required />
+  </div>
+
+  <!-- Textarea Message -->
+  <div class="form-group">
+    <textarea id="message" name="message" placeholder="Pesan Anda" rows="5" required></textarea>
+  </div>
+
+  <!-- Submit Button -->
+  <button type="submit" class="btn btn-primary" id="submitBtn">
+    <i class="fas fa-paper-plane"></i> Kirim Pesan
+  </button>
+
+  <!-- Tempat notifikasi -->
+  <p id="formStatus" class="form-status"></p>
+</form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      ============================================
+      FOOTER
+      ============================================
+      PENJELASAN:
+      - Bagian bawah website dengan copyright
+      - Link social media tambahan
+      - Informasi legal/credits
+      
+      INSTRUKSI:
+      - Ganti [Nama Anda] dengan nama Anda
+      - Update tahun copyright jika perlu
+      - Update link social media
+      ============================================
+    -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-text">
+            <!-- INSTRUKSI: Ganti [Nama Anda] dan tahun jika perlu -->
+            <p>&copy; 2025 Tony Rama. All rights reserved.</p>
+          </div>
+          
+          <!-- 
+            SOCIAL LINKS FOOTER
+            INSTRUKSI: Ganti href="#" dengan URL social media Anda
+            (sama seperti di Hero section)
+          -->
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/" class="social-link" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Troduces" class="social-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/tnyrama?igsh=cDJ0NmtrZHU3NnY1" class="social-link" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+      ============================================
+      SCROLL TO TOP BUTTON
+      ============================================
+      PENJELASAN:
+      - Tombol floating untuk kembali ke atas
+      - Muncul otomatis saat scroll ke bawah
+      - Smooth scroll ke top saat diklik
+      
+      INSTRUKSI: Tidak perlu diubah, sudah otomatis bekerja
+      ============================================
+    -->
+    <div class="scroll-top" id="scrollTop">
+      <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- 
+      ============================================
+      JAVASCRIPT
+      ============================================
+      PENJELASAN:
+      - Menghubungkan file JavaScript eksternal
+      - Berisi semua interactivity website
+      
+      INSTRUKSI: Jangan ubah lokasi script ini (harus di akhir body)
+      Untuk edit functionality, buka file script.js
+      ============================================
+    -->
+    <script src="script.js"></script>
+  </body>
+</html>
